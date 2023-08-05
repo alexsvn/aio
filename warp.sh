@@ -304,7 +304,7 @@ Print_Delimiter() {
 }
 
 Install_wgcf() {
-    curl -fsSL git.io/wgcf.sh | bash
+    cat wgcf.sh | bash
 }
 
 Uninstall_wgcf() {
@@ -429,7 +429,7 @@ Install_WireGuardGo() {
         ;;
     *)
         if [[ ${SysInfo_Kernel_Ver_major} -lt 5 || ${SysInfo_Kernel_Ver_minor} -lt 6 ]]; then
-            curl -fsSL git.io/wireguard-go.sh | bash
+	    cat wireguard-go.sh | bash
         fi
         ;;
     esac
